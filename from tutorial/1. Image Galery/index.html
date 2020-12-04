@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Website with Gallery</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="navbar">
+			<img src="Studio8 Img/logo.png" class="logo">
+			<nav>
+				<ul>
+					<li><a href="">Home</a></li>
+					<li><a href="">Office</a></li>
+					<li><a href="">Hotels</a></li>
+					<li><a href="">Contact Us</a></li>
+				</ul>
+			</nav>
+			<img src="Studio8 Img/menu.png" class="menu-icon">
+		</div>
+
+		<div class="row">
+			<div class="col">
+				<div class="text-box">
+					<h5>Our Products</h5>
+					<h1><b>Simplicity</b><br> is the <b>ultimate</b> sophistication</h1>
+				</div>
+				<img src="Studio8 Img/circle.png" class="small-icon1">
+				<img src="Studio8 Img/circle.png" class="small-icon2">
+				<img src="Studio8 Img/square.png" class="small-icon3">
+			</div>
+			<div class="col">
+				<div class="gallery-box">
+					<img src="Studio8 Img/pic2.jpg" id="gallery">
+
+					<ul>
+						<li class="btn">01</li>
+						<li class="btn active">02</li>
+						<li class="btn">03</li>
+						<li class="btn">04</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<img src="Studio8 Img/circle.png" class="small-icon4">
+		<img src="Studio8 Img/square.png" class="small-icon5">
+	</div>
+
+	<script>
+		var btn = document.getElementsByClassName("btn");
+		var gallery = document.getElementById("gallery");
+
+		//DECLARE var untuk alamat src picture
+		var images = new Array(
+			"Studio8 Img/pic1.jpg",
+			"Studio8 Img/pic2.jpg",
+			"Studio8 Img/pic3.jpg",
+			"Studio8 Img/pic4.jpg"
+			);
+
+		for(let i=0; i<btn.length; i++){
+			btn[i].onclick = function()
+			{
+				gallery.src = images[i]; //ganti src saat btn diclick
+
+				let current = document.getElementsByClassName("active");
+				current[0].className = current[0].className.replace("active", "");
+				this.className += " active";
+			};
+		}
+	</script>
+
+</body>
+</html>

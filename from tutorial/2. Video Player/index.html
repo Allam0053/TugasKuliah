@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Video Gallery</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+	<div class="container">
+		<h1>How to Make Video Gallery</h1>
+		<div class="row">
+			<div class="col">
+				<div class="feature-img">
+					<div class="title">Gryffin - Cry</div>
+					<img src="media/pic2.jpg" width="100%" class="big-pic">
+					<img src="media/play.png" class="play-btn" onclick="playvideo('media/vid1.mp4')">
+				</div>
+			</div>
+			<div class="col">
+				<div class="small-img-row">
+					<div class="small-img">
+						<img src="media/pic1.jpg" class="pic">
+						<img src="media/play.png" class="play-btn" onclick="playvideo('media/vid2.mp4')">
+					</div>
+					<p>Dua Lipa<br> Physical</p>
+				</div>
+				<div class="small-img-row">
+					<div class="small-img">
+						<img src="media/pic3.jpg" class="pic">
+						<img src="media/play.png" class="play-btn" onclick="playvideo('media/vid3.mp4')">
+					</div>
+					<p>Zedd<br>funny</p>
+				</div>
+				<div class="small-img-row">
+					<div class="small-img">
+						<img src="media/pic4.jpg" class="pic">
+						<img src="media/play.png" class="play-btn" onclick="playvideo('media/vid4.mp4')">
+					</div>
+					<p>Blackpink<br>How You Like That</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="video-player" id="videoplayer">
+		<video width="100%" controls autoplay id="myV">
+			<source src="media/vid1.mp4" type="video/mp4">
+		</video>
+		<img src="media/close.png" class="close-btn" onclick="stopvideo()">
+	</div>
+
+<script>
+	var videoplayer = document.getElementById("videoplayer");
+	var myV = document.getElementById("myV");
+
+	function stopvideo(){
+		videoplayer.style.display = "none";
+		myV.src = "";
+	}
+
+	function playvideo(file){
+		myV.src = file;
+		videoplayer.style.display = "block";
+	}
+</script>
+</body>
+</html>
