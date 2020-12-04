@@ -1,0 +1,18 @@
+1. Lengkapi data sesuai tabel yang diberikan pada materi DDL slide 52 dan buatlah genre komedi pada tabel kelompok film dengan harga sewa 50 ribu 
+2. Tambahkan data pada tabel Film
+________________________________________________________
+|K01	|komedi	|Kapan Kawin		|10	|2	|
+|K02	|komedi	|Takut Kawin		|6	|3	|
+|D02	|drama	|Ayat Ayat Cinta	|8	|3	|
+|D03	|drama	|Tiga Doa Tiga Cinta	|5	|2	|
+|H02	|horor	|Resident Evil		|7	|4	|
+---------------------------------------------------------
+
+3. Lakukan update data pada bagian harga di tabel kelompok film dengan mengalikan 10 pada harga sewa. contoh Action dari 3000 menjadi 30000 karena 3000x10 = 30000
+4. Lakukan update data pada tabel menyewa untuk atribut denda dengan aturan per film  per hari sebesar 5 ribu. Lakukan update denda pada tabel menyewa untuk semua data dengan asumsi terlambat 1 hari.
+5. Santi penggemar film komedi (no_customer 003 dan tinggal Surabaya) berniat menyewa 2 jenis film yaitu komedi dan drama (K01 dan D02) dengan kode sewa S0004 dan tgl sewa tgl 03/01/2007 (format dd/mm/yyyy), tgl kembali dikosongkan dulu. 
+6. Santi menyewa kembali 2 jenis film yaitu (K02 dan H02) dengan kode sewa S0005 dan tgl sewa tgl 06/01/2007 (format dd/mm/yyyy). Santi mengembalikan film K01 dan D02 pada tanggal 08/01/2007. Akibatnya, Santi dikenakan denda terlambat 3 hari untuk pengembalian kedua film tersebut.
+7. Tampilkan judul film yang mengandung kata “Cinta”
+8. Tampilkan judul film dengan jumlah film >2 dan genrenya komedi
+9. Tampilkan semua judul yang disewa pada tgl 03/01/2007
+10. Tampilkan nama customer yang belum mengembalikan film (Asumsi yg belum mengembalikan adalah yg tgl sewa nya masih kosong).
